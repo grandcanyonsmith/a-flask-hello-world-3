@@ -19,10 +19,7 @@ def hello():
 def check_site():
     try:
         response = requests.get('https://cars.ksl.com/')
-        if response.status_code == 200:
-            return 'its live'
-        else:
-            return 'its not'
+        return response.text
     except:
         return 'its not'
 
