@@ -22,14 +22,3 @@ def check_site():
         return response.text
     except:
         return 'its not'
-
-@app.route('/checkbadsite')
-def check_bad_site():
-    try:
-        response = requests.get('https://notcars.ksl.com/')
-        if response.status_code == 200:
-            return 'its live'
-        else:
-            return 'its not'
-    except:
-        return 'its not'
